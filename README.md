@@ -30,7 +30,7 @@ As deleções não estão validando as consistências de chave estrangeira. A ap
 não deu tempo de criar os popups indicando os erros de inconsistência.
 Os filtros de dados não foram implementados.
 
-O bando de dados foi modelado e os scripts e desenho do banco será disponibilizado.
+O bando de dados foi modelado e os scripts foram zipados e colocados neste repositório.
 
 
 
