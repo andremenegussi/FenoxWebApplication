@@ -1,0 +1,60 @@
+﻿
+@{
+
+    ViewData["Title"] = "Listagem de Marcas";
+}
+@model List<FenoxWebApplication.Models.VehicleBrand>;
+
+<h1 class="display-5 text-center">Marcas</h1>
+<br />
+<div class="d-grid gap-2 d-md-flex justify-content-md-start">
+    <a class="btn btn-primary" role="button" asp-controller="VehicleBrand" asp-action="Add">Adicionar Marca</a>
+</div>
+<br />
+<div class="text-center">
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Descrição</th>
+                <th scope="col">Status</th>
+                <th scope="col"></th>
+
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var vehicleBrand in Model)
+            {
+                <tr>
+                    <td>@vehicleBrand.Id</td>
+                    <td>@vehicleBrand.Name</td>
+                    @if (vehicleBrand.Status == true)
+                    {
+                        <td>Ativo</td>
+                    }
+                    else
+                    {
+                        <td>Inativo</td>
+                    }
+
+                    <td>
+                        <div class="btn-group" role="group" aria-label="Basic example">
+                            <a role="button" class="btn btn-primary"  asp-route-id="@vehicleBrand.Id" asp-controller="VehicleBrand" asp-action="Edit">Editar</a>
+                            <a role="button" class="btn btn-danger" asp-route-id="@vehicleBrand.Id" asp-controller="VehicleBrand" asp-action="Delete">Deletar</a>
+                        </div>
+                    </td>
+
+                </tr>
+            }
+
+        </tbody>
+    </table>
+</div>
+
+
+
+
+
+
+
+

@@ -1,0 +1,14 @@
+﻿@model VehicleModel
+
+<h1 class="display-5 text-center">Excluir Modelo</h1>
+<br />
+
+<div>
+    <h4>Você tem certeza que deseja excluir o modelo "@Model.Name"?</h4>
+    <hr />
+    <form asp-controller="VehicleModel" asp-action="ConfirmDelete" method="post">
+        <input type="hidden" asp-for="Id" />
+        <button type="submit" class="btn btn-danger">Confirmar Exclusão</button>
+        <a role="button" class="btn btn-secondary" asp-controller="VehicleModel" asp-action="Index">Cancelar</a>
+    </form>
+</div>

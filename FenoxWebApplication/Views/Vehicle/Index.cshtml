@@ -1,0 +1,61 @@
+﻿@{
+
+    ViewData["Title"] = "Listagem de Veículos";
+}
+
+
+<h1 class="display-5 text-center">Veículos</h1>
+<br />
+<div class="d-grid gap-2 d-md-flex justify-content-md-start">
+    <a class="btn btn-primary" role="button"  asp-controller="Vehicle" asp-action="Add">Adicionar Veículo</a>
+</div>
+<br />
+<div class="text-center">
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Descrição</th>
+                <th scope="col">Status</th>
+                <th scope="col"></th>
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>
+                    <div class="btn-group" role="group" aria-label="Basic example">
+                        <a role="button" class="btn btn-primary" asp-controller="Vehicle" asp-action="Edit">Editar</a>
+                        <a role="button" class="btn btn-danger">Deletar</a>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">2</th>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>
+                    <div class="btn-group" role="group" aria-label="Basic example">
+                        <a role="button" class="btn btn-primary" asp-controller="Vehicle" asp-action="Edit">Editar</a>
+                        <a role="button" class="btn btn-danger">Deletar</a>
+                    </div>
+                </td>
+
+            </tr>
+            <tr>
+                <th scope="row">3</th>
+                <td>Larry the Bird</td>
+                <td>twitter</td>
+                <td>
+                    <div class="btn-group" role="group" aria-label="Basic example">
+                        <a role="button" class="btn btn-primary" asp-controller="Vehicle" asp-action="Edit">Editar</a>
+                        <a role="button" class="btn btn-danger">Deletar</a>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

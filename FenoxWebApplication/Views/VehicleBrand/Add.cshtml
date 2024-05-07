@@ -1,0 +1,21 @@
+﻿
+@model VehicleBrand
+
+<h1 class="display-5 text-center">Adicionar Marca</h1>
+
+<br />
+
+
+<form asp-controller="VehicleBrand" asp-action="Add" method="post">
+    <div class="form-group">
+        <label for="description">Marca</label>
+        <input type="text" class="form-control" asp-for="Name" placeholder="Digite a marca">
+    </div>
+
+    <div class="form-group form-check">
+        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+        <label class="form-check-label" asp-for="Status">Ativo</label>
+    </div>
+    <button type="submit" class="btn btn-primary">Adicionar</button>
+    <a role="button" class="btn btn-secondary" asp-controller="VehicleBrand" asp-action="Index">Voltar</a>
+</form>

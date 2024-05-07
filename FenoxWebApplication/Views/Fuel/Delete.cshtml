@@ -1,0 +1,14 @@
+﻿@model Fuel
+
+<h1 class="display-5 text-center">Excluir Combustível</h1>
+<br />
+
+<div>
+    <h4>Você tem certeza que deseja excluir o combustível"@Model.Description"?</h4>
+    <hr />
+    <form asp-controller="Fuel" asp-action="ConfirmDelete" method="post">
+        <input type="hidden" asp-for="Id" />
+        <button type="submit" class="btn btn-danger">Confirmar Exclusão</button>
+        <a role="button" class="btn btn-secondary" asp-controller="Fuel" asp-action="Index">Cancelar</a>
+    </form>
+</div>

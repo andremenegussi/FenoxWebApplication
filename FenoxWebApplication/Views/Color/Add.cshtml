@@ -1,0 +1,24 @@
+﻿
+
+@{
+    ViewData["Title"] = "Adicionar Cor";
+}
+@model Color
+
+<h1 class="display-5 text-center">Adicionar Cor</h1>
+
+<br />
+
+<form asp-controller="Color" asp-action="Add" method="post">
+    <div class="form-group">
+        <label for="description">Cor</label>
+        <input type="text" asp-for="Description" class="form-control" placeholder="Digite a cor">
+    </div>
+
+    <div class="form-group form-check">
+        <input type="checkbox" class="form-check-input" asp-for="Status">
+        <label class="form-check-label" for="exampleCheck1">Ativo</label>
+    </div>
+    <button type="submit" class="btn btn-primary">Adicionar</button>
+    <a role="button" class="btn btn-secondary" asp-controller="Color" asp-action="Index">Voltar</a>
+</form>

@@ -1,0 +1,30 @@
+﻿
+@{
+}
+@model VehicleModel
+
+<h1 class="display-5 text-center">Editar Modelo</h1>
+<br />
+
+<form asp-controller="VehicleModel" asp-action="Update" method="post">
+
+    <input type="hidden" asp-for="Id" />
+    <!--<input type="hidden" asp-for="VehicleBrand.Id" />-->
+
+    <div class="form-group">
+        <label for="description">Marca</label>
+     
+        @Html.DropDownListFor(model => model.VehicleBrand.Id, new SelectList(Model.VehicleBrands, "Id", "Name", Model.VehicleBrand.Id), "Selecione uma marca", new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        <label for="description">Modelo</label>
+        <input type="text" class="form-control" asp-for="Name"placeholder="Digite o modelo">
+    </div>
+
+    <div class="form-group form-check">
+        <input type="checkbox" class="form-check-input" asp-for="Status">
+        <label class="form-check-label" >Ativo</label>
+    </div>
+    <button type="submit" class="btn btn-primary">Alterar</button>
+    <a role="button" class="btn btn-secondary" asp-controller="VehicleModel" asp-action="Index">Voltar</a>
+</form>

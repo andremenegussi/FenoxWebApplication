@@ -1,0 +1,14 @@
+﻿@model Color
+
+<h1 class="display-5 text-center">Excluir Cor</h1>
+<br />
+
+<div>
+    <h4>Você tem certeza que deseja excluir a cor "@Model.Description"?</h4>
+    <hr />
+    <form asp-controller="Color" asp-action="ConfirmDelete" method="post">
+        <input type="hidden" asp-for="Id" />
+        <button type="submit" class="btn btn-danger">Confirmar Exclusão</button>
+        <a role="button" class="btn btn-secondary" asp-controller="Color" asp-action="Index">Cancelar</a>
+    </form>
+</div>
